@@ -1,0 +1,26 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "y": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cacevedo2011/note-taker.git"
+  },
+  "keywords": [],
+  "author": "Cristian Acevedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cacevedo2011/note-taker/issues"
+  },
+  "homepage": "https://github.com/cacevedo2011/note-taker#readme"
+}
