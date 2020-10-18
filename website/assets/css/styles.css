@@ -4,15 +4,16 @@ html, body {
   padding: 0;
 }
 
-.save-note {
-  display: none;
+nav{
+  background-color: #749A79;
 }
 
-.icons i {
-  margin-left: 15px;
-  margin-right: 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
+.navbar-brand{
+  font-size: 30px;
+}
+
+.card{
+  border-color: #749A79;
 }
 
 .note-textarea, .note-title {
@@ -36,6 +37,13 @@ html, body {
 
 .note-title:read-only, .note-textarea:read-only {
   color: #757575;
+}
+
+.icons i {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .list-container .card {
@@ -67,4 +75,8 @@ html, body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+}
+
+.save-note {
+  display: none;
 }
