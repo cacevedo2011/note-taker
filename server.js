@@ -1,9 +1,8 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 
 // parse incoming string or array data
@@ -24,41 +23,39 @@ app.get('/', (req, res) => {
 // `/notes` route that returns `notes.html`
 
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './website/notes.html'));
+    res.sendFile(path.join(__dirname, "./website/notes.html"));
 });
-
 
 app.get("/api/notes", (req, res) => {
     fs.readFile("./db/db.json", "utf8", function (error, notes) {
       if (error) {
         return console.log(error);
-    }
+      }
   
       var parsedNotes = JSON.parse(notes);
   
       res.json(parsedNotes);
     });
-});
+  });
 
 
 app.post("/api/notes", (req, res) => {
     req.body.id = Date.now();
     fs.readFile("./db/db.json", "utf8", function (error, notes) {
-        if (error) {
-            return console.log(error);
+      if (error) {
+        return console.log(error);
       }
   
       var parsedNotes = JSON.parse(notes);
       parsedNotes.push(req.body);
-
-    fs.writeFile("./db/db.json", JSON.stringify(parsedNotes), function (error) {
+      fs.writeFile("./db/db.json", JSON.stringify(parsedNotes), function (error) {
         if (error) {
-            return console.log(error);
+          return console.log(error);
         }
-            res.json(req.body);
+        res.json(req.body);
       });
     });
-});
+  });
 
 
 app.delete("/api/notes/:id", (req, res) => {
