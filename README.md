@@ -6,6 +6,8 @@
 
 This week our challenge was to make webpage that would be displayed on a server file.  The app name is called Note taker and is basically an app that you can write notes and delete them, here is the  [Heroku webpage](https://secure-river-15584.herokuapp.com/).
 
+<img src="https://media.giphy.com/media/7Fit1AVLbQezqVjXji/giphy.gif" alt="gif of working app">
+
 ## Applications
 
 The applications that I used on this challenge were:
